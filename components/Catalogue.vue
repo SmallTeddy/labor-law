@@ -19,16 +19,27 @@ const chapters = ref([
 </script>
 
 <template>
-  <div class="layout">
+  <div class="layout flex-column flex-align">
     <h2>中华人民共和国劳动法</h2>
-    <p v-for="chapter in chapters" :key="chapter">
-      {{ chapter }}
+    <p>
+      （1994年7月5日第八届全国人民代表大会常务委员会第八次会议通过　根据2009年8月27日第十一届全国人民代表大会常务委员会第十次会议《关于修改部分法律的决定》第一次修正　根据2018年12月29日第十三届全国人民代表大会常务委员会第七次会议《关于修改〈中华人民共和国劳动法〉等七部法律的决定》第二次修正）
     </p>
+    <h3>目 录</h3>
+    <div class="chapters flex-column">
+      <p v-for="chapter in chapters" :key="chapter">
+        {{ chapter }}
+      </p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .layout {
-  width: 320px;
+  width: 600px;
+}
+
+.chapters p:hover {
+  cursor: pointer;
+  color: skyblue;
 }
 </style>
