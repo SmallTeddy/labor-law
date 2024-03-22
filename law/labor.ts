@@ -16,6 +16,7 @@ export const laborLawItems: ItemType[] = [
   { tier: 'content', content: '第十二章 法律责任', value: 'catalogue-12' },
   { tier: 'content', content: '第十三章 附则', value: 'catalogue-13' },
   { tier: 'br', content: '', value: '' },
+  { tier: 'br', content: '', value: '' },
   { tier: 'title', content: '第一章　总则', value: 'chapter-1' },
   { tier: 'content', content: '第一条　为了保护劳动者的合法权益，调整劳动关系，建立和维护适应社会主义市场经济的劳动制度，促进经济发展和社会进步，根据宪法，制定本法。', value: 'chapter1-1-1' },
   { tier: 'content', content: '第二条　在中华人民共和国境内的企业、个体经济组织（以下统称用人单位）和与之形成劳动关系的劳动者，适用本法。国家机关、事业组织、社会团体和与之建立劳动合同关系的劳动者，依照本法执行。', value: 'chapter1-2-1' },
