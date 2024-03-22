@@ -31,7 +31,11 @@ const searchByKeyWords = (keyWords: string) => {
   contents.forEach((item: ItemType) => {
     item.content = item.content.replaceAll(keyWords, `<span style="background: yellow; font-weight: bold; padding: 0 2px">${keyWords}</span>`)
   })
-  contentItems.value = contents
+  if(contents.length === 0) {
+    contentItems.value = resetItems()
+  } else {
+    contentItems.value = contents
+  }
 }
 
 watch(
@@ -50,12 +54,12 @@ watch(
   <div class="layout">
     <div class="catalogue flex-column flex-align">
       <h2 id="labor-title">《中华人民共和国劳动法》</h2>
-      <p v-if="!keyWords">
+      <p style="padding: 0 8px;">
         （1994年7月5日第八届全国人民代表大会常务委员会第八次会议通过　根据2009年8月27日第十一届全国人民代表大会常务委员会第十次会议《关于修改部分法律的决定》第一次修正　根据2018年12月29日第十三届全国人民代表大会常务委员会第七次会议《关于修改〈中华人民共和国劳动法〉等七部法律的决定》第二次修正）
       </p>
       <div class="content-items flex-column">
         <div v-for="item in contentItems" :key="item.value" @click="itemClick(item)">
-          <h3 v-if="item.tier === 'title'" class="flex-c">{{ item.content }}</h3>
+          <h3 v-if="item.tier === 'title'" :id="item.value" class="flex-c">{{ item.content }}</h3>
           <p v-if="item.tier === 'content'" :class="{ important: item.important }" v-html="item.content"></p>
           <br v-if="item.tier === 'br'" />
         </div>
@@ -99,7 +103,7 @@ watch(
   width: 100%;
   height: 28px;
   padding-top: 8px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 .search-box input {
@@ -107,5 +111,13 @@ watch(
   margin: 0;
   padding: 0;
   height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+.search-box input:focus-visible {
+  border: 1px solid #ccc;
+  border-radius: 0!important;
+  outline: none;
 }
 </style>
