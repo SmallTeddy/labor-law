@@ -6,11 +6,20 @@ import { laborLawItems } from '../law/labor'
 const contentItems = ref(laborLawItems)
 
 const itemClick = (item: ItemType) => {
-  let el = document.querySelector(`#chapter-${item.value.split('-')[1]}`)
+  let el
+  if(item.value.includes('catalogue')) {
+    el = document.querySelector(`#chapter-${item.value.split('-')[1]}`)
+  }
   if (el === null || el === undefined) {
     el = document.querySelector('#labor-title')
   }
   el && el.scrollIntoView()
+}
+
+const keyWords = ref('')
+const searchByKeyWords = (keyWords: string) => {
+  const contents = laborLawItems.filter(item => item.content.includes(keyWords))
+  console.log(contents)
 }
 </script>
 
@@ -29,13 +38,25 @@ const itemClick = (item: ItemType) => {
         </div>
       </div>
     </div>
+    <div class="search-box flex flex-align">
+      <input type="text" v-model="keyWords" />
+      <button>⬆️</button>
+      <button @click="searchByKeyWords(keyWords)">⬇️</button>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .layout {
   width: 600px;
-  padding: 4px 8px;
+  padding: 4px 0;
+  position: relative;
+  z-index: 0;
+}
+
+.content-items h3,
+.content-items p {
+  padding: 8px;
 }
 
 .content-items h3:hover,
@@ -46,5 +67,37 @@ const itemClick = (item: ItemType) => {
 .important {
   font-weight: bold;
   color: red;
+}
+
+.search-box {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  background: #fff;
+  width: 100%;
+  height: 28px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+.search-box input  {
+  margin: 0;
+  padding: 0;
+  margin-right: 4px;
+  height: 28px;
+  flex: 1;
+}
+
+.search-box button {
+  margin: 0 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+
+.search-box button+button {
+  margin-right: 0;
 }
 </style>

@@ -343,4 +343,6 @@ export const laborLawItems: ItemType[] = [
   { tier: 'title', content: '第十三章　附则', value: 'chapter-13' },
   { tier: 'content', content: '第一百零六条　省、自治区、直辖市人民政府根据本法和本地区的实际情况，规定劳动合同制度的实施步骤，报国务院备案。', value: 'chapter13-106-1' },
   { tier: 'content', content: '第一百零七条　本法自1995年1月1日起施行。', value: 'chapter13-107-1' },
+  { tier: 'br', content: '', value: '' },
+  { tier: 'br', content: '', value: '' },
 ]
