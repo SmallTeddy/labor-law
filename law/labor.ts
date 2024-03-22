@@ -282,4 +282,12 @@ export const laborLawItems: ItemType[] = [
   { tier: 'content', content: '因履行集体合同发生争议，当事人协商解决不成的，可以向劳动争议仲裁委员会申请仲裁；对仲裁裁决不服的，可以自收到仲裁裁决书之日起十五日内向人民法院提起诉讼。', value: 'chapter10-84-2' },
   { tier: 'br', content: '', value: '' },
   { tier: 'br', content: '', value: '' },
+  { tier: 'title', content: '第十一章　监督检查', value: 'chapter-11' },
+  { tier: 'content', content: '第八十五条　县级以上各级人民政府劳动行政部门依法对用人单位遵守劳动法律、法规的情况进行监督检查，对违反劳动法律、法规的行为有权制止，并责令改正。', value: 'chapter11-85-1' },
+  { tier: 'content', content: '第八十六条　县级以上各级人民政府劳动行政部门监督检查人员执行公务，有权进入用人单位了解执行劳动法律、法规的情况，查阅必要的资料，并对劳动场所进行检查。', value: 'chapter11-86-1' },
+  { tier: 'content', content: '县级以上各级人民政府劳动行政部门监督检查人员执行公务，必须出示证件，秉公执法并遵守有关规定。', value: 'chapter11-86-2' },
+  { tier: 'content', content: '第八十七条　县级以上各级人民政府有关部门在各自职责范围内，对用人单位遵守劳动法律、法规的情况进行监督。', value: 'chapter11-87-1' },
+  { tier: 'content', content: '第八十八条　各级工会依法维护劳动者的合法权益，对用人单位遵守劳动法律、法规的情况进行监督。', value: 'chapter11-88-1' },
+  { tier: 'content', content: '任何组织和个人对于违反劳动法律、法规的行为有权检举和控告。', value: 'chapter11-88-2' },
+  { tier: 'br', content: '', value: '' },
 ]
