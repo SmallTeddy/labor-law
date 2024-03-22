@@ -2,6 +2,10 @@
 
 该项目仅用于学习目的。
 
+## 下载
+
+最新下载地址：[release v1.1.1](https://github.com/SmallTeddy/labor-law/releases/tag/release-v1.1.1)
+
 ## 使用方法
 
 ### 1、找到拓展程序
@@ -31,3 +35,13 @@
 ### 7、点击 Labor Law 进行使用
 
 ![7](./images/7.png)
+
+## 默认展示
+
+![show](./images/show.png)
+
+## 检索功能
+
+![keyword-1](./images/keyword-1.png)
+
+![keyword-2](./images/keyword-2.png)
