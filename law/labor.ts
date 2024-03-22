@@ -339,4 +339,8 @@ export const laborLawItems: ItemType[] = [
   { tier: 'content', content: '第一百零四条　国家工作人员和社会保险基金经办机构的工作人员挪用社会保险基金，构成犯罪的，依法追究刑事责任。', value: 'chapter11-104-1' },
   { tier: 'content', content: '第一百零五条　违反本法规定侵害劳动者合法权益，其他法律、行政法规已规定处罚的，依照该法律、行政法规的规定处罚。', value: 'chapter11-105-1', important: true },
   { tier: 'br', content: '', value: '' },
+  { tier: 'br', content: '', value: '' },
+  { tier: 'title', content: '第十三章　附则', value: 'chapter-13' },
+  { tier: 'content', content: '第一百零六条　省、自治区、直辖市人民政府根据本法和本地区的实际情况，规定劳动合同制度的实施步骤，报国务院备案。', value: 'chapter13-106-1' },
+  { tier: 'content', content: '第一百零七条　本法自1995年1月1日起施行。', value: 'chapter13-107-1' },
 ]
