@@ -35,7 +35,16 @@ const contentItems: Ref<ItemType[]> = ref([
   { tier: 'content', content: '第八条　劳动者依照法律规定，通过职工大会、职工代表大会或者其他形式，参与民主管理或者就保护劳动者合法权益与用人单位进行平等协商。', value: 'chapter1-8' },
   { tier: 'content', content: '第九条　国务院劳动行政部门主管全国劳动工作。', value: 'chapter1-9-1' },
   { tier: 'content', content: '县级以上地方人民政府劳动行政部门主管本行政区域内的劳动工作。', value: 'chapter1-9-2' },
-  // { tier: 'content', content: '', value: '' }
+  { tier: 'title', content: '第二章　促进就业', value: 'chapter-2' },
+  { tier: 'content', content: '第十条　国家通过促进经济和社会发展，创造就业机会。', value: 'chapter2-1-1' },
+  { tier: 'content', content: '国家鼓励企业、事业组织、社会团体在法律、行政法规规定的范围内兴办产业或者拓展经营，增加就业。', value: 'chapter2-1-2' },
+  { tier: 'content', content: '国家支持劳动者自愿组织起来就业和从事个体经营实现就业。', value: 'chapter2-1-3' },
+  { tier: 'content', content: '第十一条　地方各级人民政府应当采取措施，发展多种类型的职业介绍机构，提供就业服务。', value: 'chapter2-2' },
+  { tier: 'content', content: '第十二条　劳动者就业，不因民族、种族、性别、宗教信仰不同而受歧视。', value: 'chapter2-3' },
+  { tier: 'content', content: '第十三条　妇女享有与男子平等的就业权利。在录用职工时，除国家规定的不适合妇女的工种或者岗位外，不得以性别为由拒绝录用妇女或者提高对妇女的录用标准。', value: 'chapter2-4' },
+  { tier: 'content', content: '第十四条　残疾人、少数民族人员、退出现役的军人的就业，法律、法规有特别规定的，从其规定。', value: 'chapter2-5' },
+  { tier: 'content', content: '第十五条　禁止用人单位招用未满十六周岁的未成年人。', value: 'chapter2-6-1' },
+  { tier: 'content', content: '文艺、体育和特种工艺单位招用未满十六周岁的未成年人，必须遵守国家有关规定，并保障其接受义务教育的权利。', value: 'chapter2-6-2' },
 ])
 
 const itemClick = (item: ItemType) => {
