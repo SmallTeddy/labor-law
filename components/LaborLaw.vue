@@ -21,10 +21,10 @@ const itemClick = (item: ItemType) => {
       <p>
         （1994年7月5日第八届全国人民代表大会常务委员会第八次会议通过　根据2009年8月27日第十一届全国人民代表大会常务委员会第十次会议《关于修改部分法律的决定》第一次修正　根据2018年12月29日第十三届全国人民代表大会常务委员会第七次会议《关于修改〈中华人民共和国劳动法〉等七部法律的决定》第二次修正）
       </p>
-      <div class="chapters flex-column">
+      <div class="content-items flex-column">
         <div v-for="item in contentItems" :key="item.value" @click="itemClick(item)">
           <h3 v-if="item.tier === 'title'" :id="item.value" class="flex-c">{{ item.content }}</h3>
-          <p v-if="item.tier === 'content'">{{ item.content }}</p>
+          <p v-if="item.tier === 'content'" :class="{ important: item.important}">{{ item.content }}</p>
           <br v-if="item.tier === 'br'" />
         </div>
       </div>
@@ -38,8 +38,13 @@ const itemClick = (item: ItemType) => {
   padding: 4px 8px;
 }
 
-.chapters p:hover {
+.content-items h3:hover,
+.content-items p:hover {
   cursor: pointer;
-  color: skyblue;
+}
+
+.important {
+  font-weight: bold;
+  color: red;
 }
 </style>
