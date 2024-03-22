@@ -1,13 +1,6 @@
-<script lang="ts" setup>
-import { ref, Ref } from 'vue';
+import { ItemType } from '../interface';
 
-interface ItemType {
-  tier: 'title' | 'content';
-  content: string;
-  value: string;
-}
-
-const contentItems: Ref<ItemType[]> = ref([
+export const laborLawItems: ItemType[] = [
   { tier: 'title', content: '目 录', value: 'catalogue' },
   { tier: 'content', content: '第一章 总则', value: 'catalogue-1' },
   { tier: 'content', content: '第二章 促进就业', value: 'catalogue-2' },
@@ -97,38 +90,4 @@ const contentItems: Ref<ItemType[]> = ref([
   { tier: 'content', content: '集体合同由工会代表职工与企业签订；没有建立工会的企业，由职工推举的代表与企业签订。', value: 'chapter3-33-2'},
   { tier: 'content', content: '第三十四条　集体合同签订后应当报送劳动行政部门；劳动行政部门自收到集体合同文本之日起十五日内未提出异议的，集体合同即行生效。', value: 'chapter3-34-1' },
   { tier: 'content', content: '第三十五条　依法签订的集体合同对企业和企业全体职工具有约束力。职工个人与企业订立的劳动合同中劳动条件和劳动报酬等标准不得低于集体合同的规定。', value: 'chapter3-35-1' },
-])
-
-const itemClick = (item: ItemType) => {
-  console.log(item);
-}
-</script>
-
-<template>
-  <div class="layout">
-    <div class="catalogue flex-column flex-align">
-      <h2>中华人民共和国劳动法</h2>
-      <p>
-        （1994年7月5日第八届全国人民代表大会常务委员会第八次会议通过　根据2009年8月27日第十一届全国人民代表大会常务委员会第十次会议《关于修改部分法律的决定》第一次修正　根据2018年12月29日第十三届全国人民代表大会常务委员会第七次会议《关于修改〈中华人民共和国劳动法〉等七部法律的决定》第二次修正）
-      </p>
-      <div class="chapters flex-column">
-        <div v-for="item in contentItems" :id="item.value" :key="item.value" @click="itemClick(item)">
-          <h3 class="flex-c" v-if="item.tier === 'title'">{{ item.content }}</h3>
-          <p v-if="item.tier === 'content'">{{ item.content }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<style scoped>
-.layout {
-  width: 600px;
-  padding: 4px 8px;
-}
-
-.chapters p:hover {
-  cursor: pointer;
-  color: skyblue;
-}
-</style>
+]

@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { ItemType } from '../interface';
+import { laborLawItems } from '../law/labor'
+
+const contentItems = ref(laborLawItems)
+
+const itemClick = (item: ItemType) => {
+  const el: HTMLElement | null = document.querySelector(`#chapter-${item.value.split('-')[1]}`)
+  el && el.scrollIntoView()
+}
+</script>
+
+<template>
+  <div class="layout">
+    <div class="catalogue flex-column flex-align">
+      <h2>中华人民共和国劳动法</h2>
+      <p>
+        （1994年7月5日第八届全国人民代表大会常务委员会第八次会议通过　根据2009年8月27日第十一届全国人民代表大会常务委员会第十次会议《关于修改部分法律的决定》第一次修正　根据2018年12月29日第十三届全国人民代表大会常务委员会第七次会议《关于修改〈中华人民共和国劳动法〉等七部法律的决定》第二次修正）
+      </p>
+      <div class="chapters flex-column">
+        <div v-for="item in contentItems" :key="item.value" @click="itemClick(item)">
+          <h3 v-if="item.tier === 'title'" :id="item.value" class="flex-c">{{ item.content }}</h3>
+          <p v-if="item.tier === 'content'">{{ item.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.layout {
+  width: 600px;
+  padding: 4px 8px;
+}
+
+.chapters p:hover {
+  cursor: pointer;
+  color: skyblue;
+}
+</style>

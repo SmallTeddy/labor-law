@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import Catalogue from '@/components/Catalogue.vue';
+import LaborLaw from '@/components/LaborLaw.vue';
 </script>
 
 <template>
-  <Catalogue />
+  <LaborLaw />
 </template>
 
 <style scoped>
