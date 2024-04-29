@@ -66,7 +66,7 @@ watch(
       </div>
     </div>
     <div class="search-box flex flex-align">
-      <input type="text" v-model="keyWords" />
+      <input type="text" v-model="keyWords" style="text-align: center;" />
     </div>
   </div>
 </template>
