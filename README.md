@@ -4,7 +4,9 @@
 
 ## 下载
 
-最新下载地址：[release v1.1.1](https://github.com/SmallTeddy/labor-law/releases/tag/release-v1.1.1)
+github最新下载地址：[release v1.1.1](https://github.com/SmallTeddy/labor-law/releases/tag/release-v1.1.1)
+
+chrome 应用商店下载地址 [release v1.1.2](https://chromewebstore.google.com/detail/labor-law/dgecpjicgonehpkboihcbnmjnggcgohk)
 
 ## 使用方法
 
